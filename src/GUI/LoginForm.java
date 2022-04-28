@@ -8,7 +8,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.prefs.Preferences;
+import java.util.prefs.Preferences; //Dung registry de luu pass
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -87,30 +87,30 @@ public class LoginForm extends JFrame {
 		panel.setLayout(null);
 
 		JLabel lblNewLabel_1 = new JLabel("LOGIN");
-		lblNewLabel_1.setForeground(Color.WHITE);
+		lblNewLabel_1.setForeground(Color.BLACK);
 		lblNewLabel_1.setFont(
-				new Font("Consolas", lblNewLabel_1.getFont().getStyle(), lblNewLabel_1.getFont().getSize() + 21));
-		lblNewLabel_1.setBounds(468, 59, 107, 58);
+				new Font("Arial", lblNewLabel_1.getFont().getStyle()| Font.BOLD, lblNewLabel_1.getFont().getSize() + 21));
+		lblNewLabel_1.setBounds(468, 60, 107, 58);
 		panel.add(lblNewLabel_1);
 
 		JLabel lblNewLabel_1_1 = new JLabel("UserName");
-		lblNewLabel_1_1.setFont(new Font("Consolas", lblNewLabel_1_1.getFont().getStyle() | Font.BOLD,
+		lblNewLabel_1_1.setFont(new Font("Consolas", lblNewLabel_1_1.getFont().getStyle(),
 				lblNewLabel_1_1.getFont().getSize() + 8));
-		lblNewLabel_1_1.setForeground(Color.WHITE);
+		lblNewLabel_1_1.setForeground(Color.BLACK);
 		lblNewLabel_1_1.setBounds(378, 149, 107, 58);
 		panel.add(lblNewLabel_1_1);
 
 		JLabel lblNewLabel_1_2 = new JLabel("PassWord");
-		lblNewLabel_1_2.setFont(new Font("Consolas", lblNewLabel_1_2.getFont().getStyle() | Font.BOLD,
+		lblNewLabel_1_2.setFont(new Font("Consolas", lblNewLabel_1_2.getFont().getStyle(),
 				lblNewLabel_1_2.getFont().getSize() + 8));
-		lblNewLabel_1_2.setForeground(Color.WHITE);
+		lblNewLabel_1_2.setForeground(Color.BLACK);
 		lblNewLabel_1_2.setBounds(378, 220, 107, 58);
 		panel.add(lblNewLabel_1_2);
 
 		txtUser = new JTextField();
-		txtUser.setBorder(new MatteBorder(0, 0, 2, 0, (Color) new Color(0, 0, 128)));
-		txtUser.setForeground(Color.WHITE);
-		txtUser.setFont(new Font("Consolas", txtUser.getFont().getStyle() | Font.BOLD,
+		txtUser.setBorder(new MatteBorder(0, 0, 2, 0, (Color) new Color(26, 43, 60)));
+		txtUser.setForeground(Color.BLACK);
+		txtUser.setFont(new Font("Consolas", txtUser.getFont().getStyle(),
 				lblNewLabel_1_2.getFont().getSize() + 2));
 		txtUser.setBackground(new Color(206, 182, 149));
 		txtUser.setBounds(476, 161, 170, 35);
@@ -118,12 +118,13 @@ public class LoginForm extends JFrame {
 		txtUser.setColumns(10);
 
 		txtPass = new JPasswordField();
-		txtPass.setForeground(Color.WHITE);
-		txtPass.setFont(new Font("Consolas", txtUser.getFont().getStyle() | Font.BOLD,
+		txtPass.setForeground(Color.BLACK);
+		txtPass.setFont(new Font("Consolas", txtUser.getFont().getStyle(),
 				lblNewLabel_1_2.getFont().getSize() + 2));
 
-		txtPass.setBackground(new Color(206, 182, 149));
-		txtPass.setBorder(new MatteBorder(0, 0, 2, 0, (Color) new Color(0, 0, 128)));
+
+                txtPass.setBackground(new Color(206, 182, 149));
+		txtPass.setBorder(new MatteBorder(0, 0, 2, 0, (Color) new Color(26, 43, 60)));
 		txtPass.setColumns(10);
 		txtPass.setBounds(478, 232, 170, 35);
 		panel.add(txtPass);
@@ -147,10 +148,10 @@ public class LoginForm extends JFrame {
 		setSize(662, 588);
 
 		JCheckBox checkboxrm = new JCheckBox("Remember Me");
-		checkboxrm.setForeground(Color.WHITE);
+		checkboxrm.setForeground(Color.BLACK);
 		checkboxrm.setBackground(new Color(0, 0, 0, 0));
 		checkboxrm.setFont(
-				new Font("Consolas", checkboxrm.getFont().getStyle() | Font.BOLD, checkboxrm.getFont().getSize() + 8));
+				new Font("Consolas", checkboxrm.getFont().getStyle(), checkboxrm.getFont().getSize() + 8));
 		checkboxrm.setBounds(372, 291, 203, 25);
                 checkboxrm.setSelected(true);
 		panel.add(checkboxrm);

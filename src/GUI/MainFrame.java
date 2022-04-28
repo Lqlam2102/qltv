@@ -445,7 +445,7 @@ public class MainFrame extends JFrame {
         lblTrangchu.setOpaque(true);
         lblTrangchu.setFont(new Font("Tahoma", Font.BOLD, 18));
         lblTrangchu.setIcon(new ImageIcon(
-                "C:\\Users\\ASUS\\Pictures\\14-145167_home-icon-home-icon-png-green-removebg-preview.png"));
+                "img\\home-icon3.png"));
         lblTrangchu.setForeground(Color.WHITE);
         lblTrangchu.setBounds(0, 74, 187, 46);
 
@@ -548,16 +548,16 @@ public class MainFrame extends JFrame {
         PanelChinh.add(pnTrangChu, "name_890335498390600");
 
         JLabel lblNewLabel_17 = new JLabel("");
-        lblNewLabel_17.setIcon(new ImageIcon("img\\iconsgu 3.png"));
+        lblNewLabel_17.setIcon(new ImageIcon("img\\iconvnuf 3.png"));
         lblNewLabel_17.setBounds(346, 177, 401, 397);
         pnTrangChu.add(lblNewLabel_17);
 
         lblUser = new JLabel("");
         lblUser.setFont(new Font("Tahoma", Font.PLAIN, 23));
         lblUser.setForeground(Color.RED);
-        lblUser.setBounds(458, 594, 159, 83);
+        lblUser.setBounds(458, 594, 200, 83);
         pnTrangChu.add(lblUser);
-        lblUser.setText("Hi  " + LoginForm.username);
+        lblUser.setText("Xin chào  " + LoginForm.username);
         PanelChinh.add(pnSach, "name_890193837575500");
 
         JPanel panel_5 = new JPanel();
@@ -572,9 +572,9 @@ public class MainFrame extends JFrame {
         lblhinhanhpre.setBounds(864, 77, 158, 252);
         pnSach.add(lblhinhanhpre);
 
-        JLabel lblNewLabel_3_1 = new JLabel("Tìm kiếm");
+        JLabel lblNewLabel_3_1 = new JLabel("Tìm theo mã sách");
         lblNewLabel_3_1.setFont(new Font("Tahoma", Font.BOLD, 15));
-        lblNewLabel_3_1.setBounds(77, 387, 112, 34);
+        lblNewLabel_3_1.setBounds(77, 387, 130, 34);
         pnSach.add(lblNewLabel_3_1);
 
         txttimsach = new JTextField();
@@ -611,7 +611,7 @@ public class MainFrame extends JFrame {
         });
         btnTm_1.setIcon(new ImageIcon("img\\Search.png"));
         btnTm_1.setFont(new Font("Tahoma", Font.BOLD, 14));
-        btnTm_1.setBounds(554, 380, 112, 51);
+        btnTm_1.setBounds(540, 380, 112, 51);
         pnSach.add(btnTm_1);
 
         PanelChinh.add(pndocgia, "name_890203323464100");
@@ -1863,7 +1863,7 @@ public class MainFrame extends JFrame {
         btnTimkiemdocgia.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent arg0) {
                 if (!isNumber(txtTimkiemdocgia.getText())) {
-                    JOptionPane.showMessageDialog(null, "tìm kiếm mã đọc giả phải là số");
+                    JOptionPane.showMessageDialog(null, "tìm kiếm mã sinh viên phải là số");
                     return;
                 }
                 int ma = Integer.parseInt(txtTimkiemdocgia.getText());
@@ -2238,6 +2238,8 @@ public class MainFrame extends JFrame {
         lblNewLabel = new JLabel("CHÀO MỪNG BẠN ĐẾN VỚI THƯ VIỆN CỦA VNUF");
         lblNewLabel.setForeground(new Color(255, 20, 147));
         lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 30));
+//        pnTrangChu.set
+
         //75
         lblNewLabel.setBounds(150, 41, 945, 185);
         pnTrangChu.add(lblNewLabel);

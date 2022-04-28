@@ -116,7 +116,7 @@ public class DocGiaDAL {
 		return i;
 	}
 	public DocGia timdocgia(int ma) {
-		String sql = "select * from docgia where madocgia = ? and trangthai = 1 ";
+		String sql = "select * from docgia where msv = ? and trangthai = 1 ";
 		DocGia docgia = new DocGia();
 		try {
 			Connection conn = DBConnect.getConnection();
