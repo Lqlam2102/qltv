@@ -674,7 +674,6 @@ public class MainFrame extends JFrame {
                     vec.add(nxb.getTenNXB());
                     vec.add(nxb.getDiaChi());
                     vec.add(nxb.getSdt());
-
                     dtmnhaxuatban.addRow(vec);
                 }
             }
@@ -1874,10 +1873,10 @@ public class MainFrame extends JFrame {
                     Vector<Object> vec = new Vector<Object>();
                     vec.add(doc.getMaDocGia());
                     vec.add(doc.getTenDocGia());
+                    vec.add(doc.getMSV()); 
                     vec.add(doc.getGioiTinh());
                     vec.add(doc.getSdt());
                     vec.add(doc.getDiachi());
-
                     dtmdocgia.addRow(vec);
                 }
             }
@@ -1898,6 +1897,7 @@ public class MainFrame extends JFrame {
         dtmdocgia = new DefaultTableModel();
         dtmdocgia.addColumn("Mã Đọc Giả");
         dtmdocgia.addColumn("Họ Và Tên");
+        dtmdocgia.addColumn("MSV");
         dtmdocgia.addColumn("Giới Tính");
         dtmdocgia.addColumn("Số Điện Thoại");
         dtmdocgia.addColumn("Địa Chỉ");
@@ -1925,10 +1925,11 @@ public class MainFrame extends JFrame {
                         if (a == JOptionPane.YES_OPTION) {
                             int maDocGia = Integer.parseInt(dtmdocgia.getValueAt(i, 0).toString());
                             String tenDocGia = dtmdocgia.getValueAt(i, 1).toString();
-                            String gioiTinh = dtmdocgia.getValueAt(i, 2).toString();
-                            String diachi = dtmdocgia.getValueAt(i, 3).toString();
-                            String sdt = dtmdocgia.getValueAt(i, 4).toString();
-                             thethanhvien = new DocGia(maDocGia, tenDocGia, gioiTinh, diachi, sdt);
+                            String gioiTinh = dtmdocgia.getValueAt(i, 3).toString();
+                            String diachi = dtmdocgia.getValueAt(i, 4).toString();
+                            String sdt = dtmdocgia.getValueAt(i, 5).toString();
+                            String msv = dtmdocgia.getValueAt(i, 2).toString();
+                             thethanhvien = new DocGia(maDocGia, tenDocGia, gioiTinh, diachi, sdt,msv);
                             GUI.TheThuVien the = new GUI.TheThuVien();
                             the.setVisible(true);
                         }
@@ -2657,9 +2658,10 @@ public class MainFrame extends JFrame {
                 if (i >= 0) {
                     txtTendocgia.setText(dtmdocgia.getValueAt(i, 1).toString());
 //                    txtgioitinhdocgia.setText(dtmdocgia.getValueAt(i, 2).toString());
-                    cbGioiTinh_dg.setSelectedItem(dtmdocgia.getValueAt(i, 2).toString());
-                    txtdiachidocgia.setText(dtmdocgia.getValueAt(i, 4).toString());
-                    txtsdtdocgia.setText(dtmdocgia.getValueAt(i, 3).toString());
+                    cbGioiTinh_dg.setSelectedItem(dtmdocgia.getValueAt(i, 3).toString());
+                    txtdiachidocgia.setText(dtmdocgia.getValueAt(i, 5).toString());
+                    txtsdtdocgia.setText(dtmdocgia.getValueAt(i, 4).toString());
+                    tbMSV.setText(dtmdocgia.getValueAt(i, 2).toString());
                 }
 
             }
@@ -3768,7 +3770,7 @@ public class MainFrame extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
 
                 DocGia docgia = new DocGia(0, txtTendocgia.getText(), cbGioiTinh_dg.getSelectedItem().toString(),
-                        txtdiachidocgia.getText(), txtsdtdocgia.getText());
+                        txtdiachidocgia.getText(), txtsdtdocgia.getText(),tbMSV.getText());
                 int j = DocGiaBUS.gI().themdocgia(docgia);
                 if (j > 0) {
                     loaddocgia();
@@ -3786,7 +3788,7 @@ public class MainFrame extends JFrame {
                 if (i >= 0) {
                     int vitri = Integer.parseInt(dtmdocgia.getValueAt(i, 0).toString());
                     DocGia docgia = new DocGia(vitri, txtTendocgia.getText(), cbGioiTinh_dg.getSelectedItem().toString(),
-                            txtdiachidocgia.getText(), txtsdtdocgia.getText());
+                            txtdiachidocgia.getText(), txtsdtdocgia.getText(),tbMSV.getText());
                     int j = DocGiaBUS.gI().suadocgia(docgia);
                     if (j > 0) {
                         loaddocgia();
@@ -3806,7 +3808,7 @@ public class MainFrame extends JFrame {
                 if (i >= 0) {
                     int vitri = Integer.parseInt(dtmdocgia.getValueAt(i, 0).toString());
                     DocGia docgia = new DocGia(vitri, txtTendocgia.getText(), cbGioiTinh_dg.getSelectedItem().toString(),
-                            txtdiachidocgia.getText(), txtsdtdocgia.getText());
+                            txtdiachidocgia.getText(), txtsdtdocgia.getText(),tbMSV.getText());
                     int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = DocGiaBUS.gI().xoadocgia(docgia);
@@ -4472,10 +4474,11 @@ public class MainFrame extends JFrame {
                 Vector<Object> vec = new Vector<Object>();
                 vec.add(dg1.getMaDocGia());
                 vec.add(dg1.getTenDocGia());
+                vec.add(dg1.getMSV()); 
                 vec.add(dg1.getGioiTinh());
                 vec.add(dg1.getSdt());
                 vec.add(dg1.getDiachi());
-
+                 
                 dtmdocgia.addRow(vec);
                 cmbmadocgiaphieumuon.addItem(dg1);
                 // .DesignLai.dtm.addRow(vec);

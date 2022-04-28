@@ -139,7 +139,7 @@ public class TheThuVien extends JFrame {
 					}
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "Bạn chưa chọnvào bảng");
+					JOptionPane.showMessageDialog(null, "Bạn chưa chọn vào bảng");
 				}
 				
 			}
@@ -161,11 +161,11 @@ public class TheThuVien extends JFrame {
 					String ketthuc = sdf.format(date2);
 					DTO.TheThuVien the = new DTO.TheThuVien(ma,madocgia,tendoc,ngaybatdau,ketthuc); 
 					if(TheThuVienBUS.gI().suatacgia(the) > 0 ) {
-						JOptionPane.showMessageDialog(null, "sửa Thẻ thành công");
+						JOptionPane.showMessageDialog(null, "Sửa thẻ thành công");
 						loadctphieunhap();
 					}
 					else {
-						JOptionPane.showMessageDialog(null, "sửa thẻ thất bại");
+						JOptionPane.showMessageDialog(null, "Sửa thẻ thất bại");
 					}
 				}
 				else {
@@ -191,11 +191,11 @@ public class TheThuVien extends JFrame {
 					String ketthuc = sdf.format(date2);
 					DTO.TheThuVien the = new DTO.TheThuVien(ma,madocgia,tendoc,ngaybatdau,ketthuc); 
 					if(TheThuVienBUS.gI().xoatacgia(the) > 0 ) {
-						JOptionPane.showMessageDialog(null, "xoá Thẻ thành công");
+						JOptionPane.showMessageDialog(null, "Xoá thẻ thành công");
 						loadctphieunhap();
 					}
 					else {
-						JOptionPane.showMessageDialog(null, "xoá thẻ thất bại");
+						JOptionPane.showMessageDialog(null, "Xoá thẻ thất bại");
 					}
 				}
 				else {
@@ -225,7 +225,7 @@ public class TheThuVien extends JFrame {
 					String ketthuc = sdf.format(date2);
 					DTO.TheThuVien the = new DTO.TheThuVien(ma,madocgia,tendoc,ngaybatdau,ketthuc); 
 					if(TheThuVienBUS.gI().suatacgia(the) > 0 ) {
-						JOptionPane.showMessageDialog(null, "Gia hạn Thẻ thành công");
+						JOptionPane.showMessageDialog(null, "Gia hạn thẻ thành công");
 						loadctphieunhap();
 					}
 					else {

@@ -152,6 +152,7 @@ public class LoginForm extends JFrame {
 		checkboxrm.setFont(
 				new Font("Consolas", checkboxrm.getFont().getStyle() | Font.BOLD, checkboxrm.getFont().getSize() + 8));
 		checkboxrm.setBounds(372, 291, 203, 25);
+                checkboxrm.setSelected(true);
 		panel.add(checkboxrm);
 		loadtaikhoan();
 		btnNewButton.addActionListener(new ActionListener() {
@@ -167,7 +168,7 @@ public class LoginForm extends JFrame {
 					if (taiKhoan2.getUsername().trim().equals(txtUser.getText().trim())
 							&& taiKhoan2.getPassword().trim().equals(txtPass.getText().trim())) {
 
-						JOptionPane.showMessageDialog(contentPane, "Đăng NhậpThành Công");
+//						JOptionPane.showMessageDialog(contentPane, "Đăng NhậpThành Công");
 						isdangnhap = true;
 						dangnhap = true;
 						setVisible(false);

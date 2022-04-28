@@ -41,6 +41,14 @@ public class DocGiaBUS {
 			showmess("Không được bỏ trống tên đọc giả");
 			return -1;
 		}
+                if(docgia.getMSV().isEmpty()) {
+			showmess("Không được bỏ trống mã sinh viên");
+			return -1;
+		}
+                if(!isNumber(docgia.getMSV()) || docgia.getMSV().length() <=9) {
+			showmess("Mã sinh viên phải là số gôm 10 gồm mười chữ số");
+			return -1;
+		}
 		if(docgia.getDiachi().isEmpty()) {
 			showmess("Không được bỏ trống địa chỉ");
 			return -1;
@@ -49,8 +57,8 @@ public class DocGiaBUS {
 			showmess("Số điện thoại không được bỏ trống");
 			return -1;
 		}
-		if(!isNumber(docgia.getSdt())) {
-			showmess("Số điện thoại phải là số , không được nhập chữ");
+		if(!isNumber(docgia.getSdt()) || docgia.getSdt().length() >11) {
+			showmess("Số điện thoại không hợp lệ");
 			return -1;
 		}
 		if(docgia.getGioiTinh().isEmpty()) {

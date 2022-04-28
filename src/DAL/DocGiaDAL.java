@@ -27,7 +27,7 @@ public class DocGiaDAL {
 				ke.setTenDocGia(rs.getString(2));
 				ke.setGioiTinh(rs.getString(3));
 				ke.setSdt(rs.getString(5));
-				
+				ke.setMSV(rs.getString(7));
 				dsl.add(ke);
 
 			}
@@ -44,7 +44,7 @@ public class DocGiaDAL {
 	// @SuppressWarnings("null")
 	public static int themdocgia(DocGia ke) {
 		int i = -1;
-		String sql = "insert into docgia (tendocgia,gioitinh,diachi,sdt,trangthai) values(?,?,?,?,?)";
+		String sql = "insert into docgia (tendocgia,gioitinh,diachi,sdt,trangthai,msv) values(?,?,?,?,?,?)";
 
 		try {
 			
@@ -56,6 +56,7 @@ public class DocGiaDAL {
 			pstm.setString(3, ke.getDiachi());
 			pstm.setString(4, ke.getSdt());
 			pstm.setInt(5, 1);
+                        pstm.setString(6, ke.getMSV());
 			i = pstm.executeUpdate();
 			conn.close();
 
@@ -69,7 +70,7 @@ public class DocGiaDAL {
 
 	public static int suadocgia(DocGia ke) {
 		int i = -1;
-		String sql = "update docgia set tendocgia = ?,diachi =? ,gioitinh = ?,sdt = ? where madocgia = ?";
+		String sql = "update docgia set tendocgia = ?,diachi =? ,gioitinh = ?,sdt = ?, msv = ? where madocgia = ?";
 
 		try {
 
@@ -80,7 +81,8 @@ public class DocGiaDAL {
 			pstm.setString(2, ke.getDiachi());
 			pstm.setString(3, ke.getGioiTinh());
 			pstm.setString(4, ke.getSdt());
-			pstm.setInt(5, ke.getMaDocGia());
+                        pstm.setString(5, ke.getMSV());
+			pstm.setInt(6, ke.getMaDocGia());
 			// System.out.println(ke.getViTri());
 			i = pstm.executeUpdate();
 			conn.close();
@@ -127,6 +129,7 @@ public class DocGiaDAL {
 				docgia.setTenDocGia(rs.getString(2));
 				docgia.setGioiTinh(rs.getString(3));
 				docgia.setSdt(rs.getString(5));
+                                docgia.setMSV(rs.getString(7));
 			}
 			return docgia; 
 		} catch (Exception e) {

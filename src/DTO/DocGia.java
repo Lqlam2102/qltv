@@ -6,6 +6,7 @@ public class DocGia {
 	private String GioiTinh ;
 	private String diachi;
 	private String sdt;
+        private String MSV;
 	public int getMaDocGia() {
 		return MaDocGia;
 	}
@@ -24,6 +25,12 @@ public class DocGia {
 	public void setGioiTinh(String gioiTinh) {
 		GioiTinh = gioiTinh;
 	}
+        public String getMSV() {
+            return MSV;
+	}
+	public void setMSV(String msv) {
+            MSV = msv;
+	}
 	public String getDiachi() {
 		return diachi;
 	}
@@ -36,13 +43,14 @@ public class DocGia {
 	public void setSdt(String sdt) {
 		this.sdt = sdt;
 	}
-	public DocGia(int maDocGia, String tenDocGia, String gioiTinh, String diachi, String sdt) {
+	public DocGia(int maDocGia, String tenDocGia, String gioiTinh, String diachi, String sdt, String msv) {
 		super();
 		MaDocGia = maDocGia;
 		TenDocGia = tenDocGia;
 		GioiTinh = gioiTinh;
 		this.diachi = diachi;
 		this.sdt = sdt;
+                MSV = msv;
 	}
 	public DocGia() {
 		super();
