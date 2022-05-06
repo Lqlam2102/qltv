@@ -5,7 +5,7 @@
 - Import from file "qltv.sql" to `Php Admin` `MySql` 
 - Check the connection again (In example, i use account "root" with password is "lequylam2001")
 
-## ✨ Demo
+## ✨ Demo / Tutorial
 - Link Youtube: https://youtu.be/2qtHv1_zVfs
 
 ## 📝 License
