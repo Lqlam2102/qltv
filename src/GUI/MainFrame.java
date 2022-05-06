@@ -2723,7 +2723,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent arg0) {
 
-                lbldangxuat.setBackground(Color.blue);
+                lbldangxuat.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2757,7 +2757,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent arg0) {
 
-                lblchung.setBackground(Color.blue);
+                lblchung.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2803,7 +2803,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lblnhanvien.setBackground(Color.blue);
+                lblnhanvien.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2843,7 +2843,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lblnhaxuatban.setBackground(Color.blue);
+                lblnhaxuatban.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2883,7 +2883,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lbldocgia.setBackground(Color.blue);
+                lbldocgia.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2922,7 +2922,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent arg0) {
 
-                lblTrangchu.setBackground(Color.BLUE);
+                lblTrangchu.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -2962,7 +2962,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lblSach.setBackground(Color.blue);
+                lblSach.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -3001,7 +3001,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lbltacgia.setBackground(Color.blue);
+                lbltacgia.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -3041,7 +3041,7 @@ public class MainFrame extends JFrame {
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                lblthongke.setBackground(Color.blue);
+                lblthongke.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -3083,7 +3083,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent e) {
 
-                lblphieumuon.setBackground(Color.blue);
+                lblphieumuon.setBackground(new Color(154, 154, 154));
             }
 
             @Override
@@ -3122,7 +3122,7 @@ public class MainFrame extends JFrame {
             @Override
             public void mouseEntered(MouseEvent arg0) {
 
-                lblphieunhap.setBackground(Color.blue);
+                lblphieunhap.setBackground(new Color(154, 154, 154));
             }
 
             @Override

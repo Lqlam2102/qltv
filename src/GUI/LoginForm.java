@@ -129,9 +129,10 @@ public class LoginForm extends JFrame {
 		txtPass.setBounds(478, 232, 170, 35);
 		panel.add(txtPass);
 
-		JButton btnNewButton = new JButton("LOGIN");
-
-		btnNewButton.setBounds(468, 325, 119, 58);
+		JButton btnNewButton = new JButton("Đăng nhập");
+                btnNewButton.setFont(new Font("Arial", txtUser.getFont().getStyle(),
+				lblNewLabel_1_2.getFont().getSize() + 3));
+		btnNewButton.setBounds(431, 425, 175, 58);
 		panel.add(btnNewButton);
 
 		JLabel lblexit = new JLabel("");
@@ -147,12 +148,12 @@ public class LoginForm extends JFrame {
 		panel.add(lblexit);
 		setSize(662, 588);
 
-		JCheckBox checkboxrm = new JCheckBox("Remember Me");
+		JCheckBox checkboxrm = new JCheckBox("Remember me");
 		checkboxrm.setForeground(Color.BLACK);
 		checkboxrm.setBackground(new Color(0, 0, 0, 0));
 		checkboxrm.setFont(
-				new Font("Consolas", checkboxrm.getFont().getStyle(), checkboxrm.getFont().getSize() + 8));
-		checkboxrm.setBounds(372, 291, 203, 25);
+				new Font("Arial", checkboxrm.getFont().getStyle(), checkboxrm.getFont().getSize() + 6));
+		checkboxrm.setBounds(372, 300, 203, 25);
                 checkboxrm.setSelected(true);
 		panel.add(checkboxrm);
 		loadtaikhoan();
