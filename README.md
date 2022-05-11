@@ -7,6 +7,7 @@
 
 ## ✨ Demo / Tutorial
 - Link Youtube: https://youtu.be/2qtHv1_zVfs
+- Diagram: <img src="https://i.ibb.co/JQfWv9D/qltvimg.png" alt="QLTV"> 
 
 ## 📝 License
 
