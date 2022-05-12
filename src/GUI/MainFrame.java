@@ -569,7 +569,7 @@ public class MainFrame extends JFrame {
 
         lblhinhanhpre = new JLabel("");
         lblhinhanhpre.setOpaque(true);
-        lblhinhanhpre.setBounds(864, 77, 158, 252);
+        lblhinhanhpre.setBounds(864, 77, 158, 228);
         pnSach.add(lblhinhanhpre);
 
         JLabel lblNewLabel_3_1 = new JLabel("Tìm theo mã sách");
