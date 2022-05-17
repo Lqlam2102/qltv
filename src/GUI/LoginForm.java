@@ -187,7 +187,7 @@ public class LoginForm extends JFrame {
 		});
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("img\\loginform2.png"));
+		lblNewLabel.setIcon(new ImageIcon("img\\loginform3.png"));
 		lblNewLabel.setBounds(-25, -12, 691, 628);
 		panel.add(lblNewLabel);
 		setBackground(new Color(0, 0, 0, 0));
