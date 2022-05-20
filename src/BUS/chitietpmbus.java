@@ -7,10 +7,12 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 
 import DAL.PhieuMuonDAL;
+import DAL.SachDAL;
 import DAL.chitietpmDAL;
 import DTO.ChiTieuPMDTO;
 import DTO.PhieuMuon;
 import GUI.MainFrame;
+import static GUI.MainFrame.txtmasachmuon;
 
 public class chitietpmbus {
 			
@@ -37,6 +39,14 @@ public class chitietpmbus {
 				JOptionPane.showMessageDialog(null, "Mã sách không được bỏ trống");
 				return -1;
 			}
+                         int slsach=0;
+                        slsach = SachDAL.getsoluongsach(Integer.valueOf(txtmasachmuon.getText()));
+                        if(slsach<=0){
+
+                            JOptionPane.showMessageDialog(null, "Đã hết sách");
+                            return -1;
+                        }
+
 			if(sdf.parse(pm.getNgayTra()).before(sdf.parse(pm.getNgayMuon()))) {
 				JOptionPane.showMessageDialog(null, "Ngày trả không được bé hơn ngày mượn");
 				return -1;
@@ -78,6 +88,14 @@ public class chitietpmbus {
 				JOptionPane.showMessageDialog(null, "Ngày mượn không được lớn hơn ngày trả");
 				return -1;
 			}
+                        int slsach=0;
+                        slsach = SachDAL.getsoluongsach(Integer.valueOf(txtmasachmuon.getText()));
+                        if(slsach<=0){
+
+                            JOptionPane.showMessageDialog(null, "Đã hết sách");
+                            return -1;
+                        }
+
 			if(chitietpmDAL.suactpm(pm) > 0) {
 				JOptionPane.showMessageDialog(null, "Sửa chi tiết thành công");
 				return 1;

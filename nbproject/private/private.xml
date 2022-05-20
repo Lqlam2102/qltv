@@ -6,7 +6,11 @@
             <file>file:/E:/Java/JavaApplication3/src/GUI/LoginForm.java</file>
             <file>file:/E:/Java/JavaApplication3/src/GUI/Main.java</file>
             <file>file:/E:/Java/JavaApplication3/src/BUS/DocGiaBUS.java</file>
+            <file>file:/E:/Java/JavaApplication3/src/BUS/PhieuNhapBUS.java</file>
+            <file>file:/E:/Java/JavaApplication3/src/BUS/SachBus.java</file>
+            <file>file:/E:/Java/JavaApplication3/src/BUS/chitietpmbus.java</file>
             <file>file:/E:/Java/JavaApplication3/src/DAL/DocGiaDAL.java</file>
+            <file>file:/E:/Java/JavaApplication3/src/BUS/PhieuMuonBus.java</file>
             <file>file:/E:/Java/JavaApplication3/src/GUI/MainFrame.java</file>
         </group>
     </open-files>

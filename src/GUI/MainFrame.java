@@ -4056,13 +4056,13 @@ public class MainFrame extends JFrame {
                 }
                 
               
-                int slsach=0;
-                slsach = SachDAL.getsoluongsach(Integer.valueOf(txtmasachmuon.getText()));
-                if(slsach<=0){
-                    
-                    JOptionPane.showMessageDialog(null, "Đã hết sách");
-                    return;
-                }
+//                int slsach=0;
+//                slsach = SachDAL.getsoluongsach(Integer.valueOf(txtmasachmuon.getText()));
+//                if(slsach<=0){
+//                    
+//                    JOptionPane.showMessageDialog(null, "Đã hết sách");
+//                    return;
+//                }
 
                 ChiTieuPMDTO ctpm = new ChiTieuPMDTO(0, Integer.parseInt(txtmapm.getText()),
                         Integer.parseInt(txtmasachmuon.getText()), ngaymuon2, ngaytra, txtghichuctpm.getText());
