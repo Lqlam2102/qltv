@@ -37,6 +37,7 @@ public class DocGiaBUS {
 	
 
 	public int themdocgia(DocGia docgia) {
+            
 		if(docgia.getTenDocGia().isEmpty()) {
 			showmess("Không được bỏ trống tên đọc giả");
 			return -1;
@@ -45,6 +46,10 @@ public class DocGiaBUS {
 			showmess("Không được bỏ trống mã sinh viên");
 			return -1;
 		}
+                if(docgia.getMSV().equals(timdocgia(Integer.valueOf(docgia.getMSV())).getMSV())){
+                        showmess("Sinh viên đã tồn tại trên hệ thống!");
+			return -1;
+                }
                 if(!isNumber(docgia.getMSV()) || docgia.getMSV().length() <=9) {
 			showmess("Mã sinh viên phải là số gôm 10 gồm mười chữ số");
 			return -1;
@@ -57,6 +62,10 @@ public class DocGiaBUS {
 			showmess("Số điện thoại không được bỏ trống");
 			return -1;
 		}
+                if(docgia.getSdt().equals(timdocgia(Integer.valueOf(docgia.getMSV())).getSdt())){
+                        showmess("Cảnh báo! Số điện thoại đã tồn tại trên hệ thống!");
+			return -1;
+                }
 		if(!isNumber(docgia.getSdt()) || docgia.getSdt().length() >11) {
 			showmess("Số điện thoại không hợp lệ");
 			return -1;
