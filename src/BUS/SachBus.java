@@ -27,7 +27,7 @@ public class SachBus {
 			return -1;
 		}
 		if (pm.getSoluong() <= 0) {
-			showmess("Số lượgn sách phải lớn hơn 0");
+			showmess("Số lượng sách phải lớn hơn 0");
 			return -1;
 		}
 		if (pm.getNamxb() > year) {
@@ -58,7 +58,7 @@ public class SachBus {
 			return -1;
 		}
 		if (pm.getSoluong() <= 0) {
-			showmess("Số lượgn sách phải lớn hơn 0");
+			showmess("Số lượng sách phải lớn hơn 0");
 			return -1;
 		}
 		if (pm.getNamxb() > year) {

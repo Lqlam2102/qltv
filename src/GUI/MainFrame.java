@@ -2970,6 +2970,7 @@ public class MainFrame extends JFrame {
 
                 pnTrangChu.show(false);
                 pnSach.show(true);
+                loadsach();
                 pndocgia.show(false);
                 pntacgia.show(false);
                 pnnhaxuatban.show(false);
@@ -3012,6 +3013,7 @@ public class MainFrame extends JFrame {
                 pnSach.show(false);
                 pndocgia.show(false);
                 pntacgia.show(true);
+                loadtacgia();
                 pnnhaxuatban.show(false);
                 pnnhanvien.show(false);
                 pnPhieumuon.show(false);
@@ -3057,7 +3059,7 @@ public class MainFrame extends JFrame {
                 pnchung.show(false);
 
                 panelThongKe.show();
-
+                loadthongkephieunhap();
                 pnPhieuNhap.show(false);
             }
         });
@@ -3096,6 +3098,7 @@ public class MainFrame extends JFrame {
                 pnnhaxuatban.show(false);
                 pnnhanvien.show(false);
                 pnPhieumuon.show();
+                loadctphieumuon();
                 pnPhieuNhap.show(false);
                 pnchung.show(false);
                 panelThongKe.show(false);
@@ -3136,6 +3139,7 @@ public class MainFrame extends JFrame {
                 pnnhanvien.show(false);
                 pnPhieumuon.show(false);
                 pnPhieuNhap.show();
+                loadphieunhap();
                 pnchung.show(false);
                 panelThongKe.show(false);
             }
@@ -3338,7 +3342,7 @@ public class MainFrame extends JFrame {
                 if (i > -1) {
                     int vitri = Integer.parseInt(dtmke.getValueAt(i, 0).toString());
                     KeSachDTO ke = new KeSachDTO(vitri, txtKeSach.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá "+ txtKeSach.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         if (KeSachBus.gI().xoake(ke) >= 0) {
                             loadkesach();
@@ -3361,7 +3365,7 @@ public class MainFrame extends JFrame {
                 int i = tableloai.getSelectedRow();
                 int vitri = Integer.parseInt(dtmloai.getValueAt(i, 0).toString());
                 LoaisachDTO ke = new LoaisachDTO(vitri, txttenloai.getText());
-                int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txttenloai.getText() , "", JOptionPane.YES_NO_OPTION);
                 if (a == JOptionPane.YES_OPTION) {
                     int j = LoaiBUS.gI().xoaloai(ke);
                     if (j > 0) {
@@ -3412,7 +3416,7 @@ public class MainFrame extends JFrame {
                 if (i >= 0) {
                     int vitri = Integer.parseInt(dtmncc.getValueAt(i, 0).toString());
                     NhaCungCapDTO ncc = new NhaCungCapDTO(vitri, txtNcc.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txtNcc.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = NhaCungcapbus.gI().xoancc(ncc);
                         if (j > 0) {
@@ -3515,7 +3519,7 @@ public class MainFrame extends JFrame {
                     }
 
                 } else {
-                    JOptionPane.showMessageDialog(null, "Bạn chưua chọn nhân viên nào hết");
+                    JOptionPane.showMessageDialog(null, "Bạn chưa chọn nhân viên nào hết");
                 }
             }
         });
@@ -3545,7 +3549,7 @@ public class MainFrame extends JFrame {
                     NhanVien nv;
                     nv = new NhanVien(vitri, txttennv.getText(), txtnamsinhnv.getText(), cbGioiTinh_nv.getSelectedItem().toString(),
                             txtsodienthoainv.getText(), txtdiachinv.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txttennv.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = NhanVienBus.gI().xoanhanvien(nv);
                         if (j > 0) {
@@ -3689,7 +3693,7 @@ public class MainFrame extends JFrame {
                     int vitri = Integer.parseInt(dtmnhaxuatban.getValueAt(i, 0).toString());
                     NhaXuatBan nxb = new NhaXuatBan(vitri, txtTennhaxuatban.getText(), txtdiachinxb.getText(),
                             txtsdtnxb.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txtTennhaxuatban.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = NhaXuatBanBUS.gI().xoanxb(nxb);
                         if (j > 0) {
@@ -3750,7 +3754,7 @@ public class MainFrame extends JFrame {
                     int vitri = Integer.parseInt(dtmtacgia.getValueAt(i, 0).toString());
                     TacGiaDTO tg = new TacGiaDTO(vitri, txtTentacgia.getText(), txtnamsinhtacgia.getText(),
                             txtQueQuan.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txtTentacgia.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = TacGiaBUS.gI().xoatacgia(tg);
                         if (j > 0) {
@@ -3811,7 +3815,7 @@ public class MainFrame extends JFrame {
                     int vitri = Integer.parseInt(dtmdocgia.getValueAt(i, 0).toString());
                     DocGia docgia = new DocGia(vitri, txtTendocgia.getText(), cbGioiTinh_dg.getSelectedItem().toString(),
                             txtdiachidocgia.getText(), txtsdtdocgia.getText(),tbMSV.getText());
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txtTendocgia.getText(), "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = DocGiaBUS.gI().xoadocgia(docgia);
                         if (j > 0) {
@@ -3902,7 +3906,7 @@ public class MainFrame extends JFrame {
                     int masach = Integer.parseInt(dtmsach.getValueAt(i, 0).toString());
                     SachDTO sach = new SachDTO(masach, tensach, matg, manxb, loai, namxb, soluong, "", hinhanh,
                             makesach);
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá " + txttensach.getText() , "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = SachBus.gI().xoasach(sach);
                         if (j > 0) {
@@ -4002,7 +4006,7 @@ public class MainFrame extends JFrame {
                     int vitri = Integer.parseInt(dtmmuon.getValueAt(i, 0).toString());
                     String tinhtrang = tinhtrangmuon();
                     PhieuMuon pm = new PhieuMuon(vitri, nvsl.getMaNV(), dgsl.getMaDocGia(), ngaymuon, tinhtrang);
-                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá", "", JOptionPane.YES_NO_OPTION);
+                    int a = JOptionPane.showConfirmDialog(null, "Bạn có muốn xoá ", "", JOptionPane.YES_NO_OPTION);
                     if (a == JOptionPane.YES_OPTION) {
                         int j = PhieuMuonBus.gI().xoapm(pm);
                         if (j > 0) {
@@ -4030,6 +4034,7 @@ public class MainFrame extends JFrame {
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
                 String ngaymuon2;
                 String ngaytra;
+                
                 try {
                     ngaytra = sdf.format(dateChooser_ngaytra.getDate());
                     ngaymuon2 = sdf.format(dateChooser.getDate());
@@ -4047,6 +4052,15 @@ public class MainFrame extends JFrame {
                 }
                 if (!isNumber(txtmasachmuon.getText())) {
                     JOptionPane.showMessageDialog(null, "Mã sách mượn sai");
+                    return;
+                }
+                
+              
+                int slsach=0;
+                slsach = SachDAL.getsoluongsach(Integer.valueOf(txtmasachmuon.getText()));
+                if(slsach<=0){
+                    
+                    JOptionPane.showMessageDialog(null, "Đã hết sách");
                     return;
                 }
 

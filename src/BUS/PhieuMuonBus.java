@@ -38,10 +38,10 @@ public class PhieuMuonBus {
 				return -1;
 			}
 			if(PhieuMuonDAL.thempm(pm) > 0) {
-				showmess("Đã thêm phiếu mượnt thành công");
+				showmess("Đã thêm phiếu mượn thành công");
 				return 1;
 			}
-			showmess("Đã thêm phiếu mượnt thất bại");
+			showmess("Đã thêm phiếu mượn thất bại");
 			return -1;
 			
 		} catch (Exception e) {
@@ -63,10 +63,10 @@ public class PhieuMuonBus {
 				return -1;
 			}
 			if(PhieuMuonDAL.suapm(pm) > 0) {
-				showmess("Đã sửa phiếu mượnt thành công");
+				showmess("Đã sửa phiếu mượn thành công");
 				return 1;
 			}
-			showmess("Đã sửa phiếu mượnt thất bại");
+			showmess("Đã sửa phiếu mượn thất bại");
 			return -1;
 			
 		} catch (Exception e) {
@@ -79,7 +79,7 @@ public class PhieuMuonBus {
 			showmess("Đã xoá phiếu mượn thành công");
 			return 1;
 		}
-		showmess("Đã xoa phiếu mượnt thất bại");
+		showmess("Đã xoa phiếu mượn thất bại");
 		return -1;
 	}
 
